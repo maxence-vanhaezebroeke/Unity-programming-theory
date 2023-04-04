@@ -423,6 +423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PremiumToaster
       objectReference: {fileID: 0}
+    - target: {fileID: 8630492130324213903, guid: a3a39ac806f0d3c43a582aeecde46f92, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3a39ac806f0d3c43a582aeecde46f92, type: 3}
 --- !u!1001 &1040622024
@@ -479,6 +483,18 @@ PrefabInstance:
     - target: {fileID: 2204496347158175955, guid: 44dd2a3533cad704184c701aa69c710a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251529551425382957, guid: 44dd2a3533cad704184c701aa69c710a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251529551425382957, guid: 44dd2a3533cad704184c701aa69c710a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.378
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251529551425382957, guid: 44dd2a3533cad704184c701aa69c710a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.304
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44dd2a3533cad704184c701aa69c710a, type: 3}
