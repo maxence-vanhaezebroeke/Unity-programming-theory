@@ -10,14 +10,10 @@ public class TitleScreen : MonoBehaviour
     void Start()
     {
         if (_nameInputField == null)
-        {
-            Debug.Log("Please serialize _nameInputField variable.");
-        }
-        else
-        {
-            // Auto-select name field at start
-            _nameInputField.Select();
-        }
+            throw new UnassignedReferenceException("_nameInputField is not assigned.");
+
+        // Auto-select name field at start
+        _nameInputField.Select();
     }
 
     void Update()

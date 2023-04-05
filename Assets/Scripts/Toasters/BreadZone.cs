@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+// Bread detection for toasters
 [RequireComponent(typeof(BoxCollider))]
 public class BreadZone : MonoBehaviour
 {    
@@ -84,7 +85,7 @@ public class BreadZone : MonoBehaviour
     {
         Bread lBread = pOther.GetComponent<Bread>();
         // If bread is kinematic, it means that we're manipulating it inside the toaster.
-        // Bread will later exit the toaster but with kinematic force, so wait for this moment !
+        // Bread will later exit the toaster but with kinematic, so wait for this moment !
         if (lBread && !lBread.IsKinematic && lBread == _insertedBread)
         {
             _insertedBread = null;

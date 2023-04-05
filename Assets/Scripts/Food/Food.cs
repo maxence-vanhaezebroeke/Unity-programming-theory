@@ -35,7 +35,7 @@ public class Food : MonoBehaviour
     // Will add up force to the food, with a little twist (like if someone is throwing the food, not perfectly up)
     public void ThrowUp(float pForceValue)
     {
-        // Flip coin for positive or negative direction
+        // Flip coin for direction
         int lRandomDirection = Random.Range(0, 2) == 0 ? 1 : -1;
         // Find random force in random direction
         Vector3 lRandomXForce = new Vector3(Random.Range(.05f, .3f), 0f, 0f) * lRandomDirection;
