@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Toaster : MonoBehaviour
@@ -8,34 +6,39 @@ public class Toaster : MonoBehaviour
     [SerializeField]
     private BreadZone _breadZone;
 
-    private Bread _insertedBread;
-
-    public virtual float CookingTime { get; set; }
-
     void Awake()
     {
         if (_breadZone == null)
-        {
-            throw new UnassignedReferenceException("_breadZone");
-        }
-
+            throw new UnassignedReferenceException("_breadZone is not assigned.");
+        
         _breadZone.OnBreadEnter += BreadZone_OnBreadEnter;
     }
 
     private void BreadZone_OnBreadEnter(Bread pBread)
     {
-        StartCoroutine(nameof(CookBread));
+        StartCoroutine(nameof(CookBread), pBread);
     }
 
-    private IEnumerator CookBread()
+    private IEnumerator CookBread(Bread pBread)
     {
-        yield return new WaitForSeconds(CookingTime);
-        _insertedBread.Toast();
+        // Cook the bread
+        yield return new WaitForSeconds(pBread.CookingTime);
+        // It's now toasted !
+        ToastBread(pBread);
+        // Wait one second when the break is toasted before throwing it out
+        yield return new WaitForSeconds(1);
+        _breadZone.ThrowOutBread();
+    }
+
+    // ABSTRACTION
+    // ENCAPSULATION - only to be called here or by children
+    protected virtual void ToastBread(Bread pBread)
+    {
+        pBread.Toast();
     }
 
     void OnDestroy()
     {
         _breadZone.OnBreadEnter -= BreadZone_OnBreadEnter;
     }
-
 }
