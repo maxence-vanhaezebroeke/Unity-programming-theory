@@ -6,7 +6,8 @@ Here, I developed a scene where I made 2 different toasters, and 2 different typ
 Mixing breads with toasters will get different results :  
 - Normal bread with normal toaster will get you normal toast. (on the left)
 - Premium bread with premium toaster will get you premium toast. (middle)
-- Premium bread with normal toaster will get you normal toast, at premium bread cooking speed. (right)
+- Premium bread with normal toaster will get you normal toast, at premium bread cooking speed. (right)  
+
 For this, I used the 4 pillars of OOP : Abstraction, Encapsulation, Inheritance & Polymorphism
 
 # Preview
